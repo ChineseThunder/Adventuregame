@@ -4,15 +4,15 @@ public class Adventure{
     public static void main(String[] args) {
 
 
-        Room room1 = new Room ("1 a Plane.","You are about to jump out of the plane.");
-        Room room2 = new Room ("2 Falling.","You are currently falling with 200 mph, your childhood memories are replaying before your eyes. ");
-        Room room3 = new Room ("3 Dead.","You smashed a massive hole in the ground, you are dead.");
-        Room room4 = new Room ("4 Falling.","You are falling with 200mph, you are about to pull your parachute. ");
-        Room room5 = new Room ("5 in a 7-eleven.","You bought a 6-pack of beers and a pack of cigarettes. Today has been a good day.");
-        Room room6 = new Room ("6 hit by a magical light.","....You have resin from the dead.");
-        Room room7 = new Room ("7 at Strøget.","You are flying safely above Copenhagen, and landing at the nice landing strip Strøget. ");
-        Room room8 = new Room ("8 walking down the street.","People are yelling at you, but you dont care." );
-        Room room9 = new Room ("9 at Storke springvandet.","Your washing the blood of your clothes, unfortunately you hit a family on the way down. ");
+        Room room1 = new Room ("a plane.","You are about to jump out of the plane.");
+        Room room2 = new Room ("falling.","You are currently falling with 200 mph, your childhood memories are replaying before your eyes. ");
+        Room room3 = new Room ("dead.","You smashed a massive hole in the ground, you are dead.");
+        Room room4 = new Room ("falling.","You are falling with 200mph, you are about to pull your parachute. ");
+        Room room5 = new Room ("in a 7-eleven.","You bought a 6-pack of beers and a pack of cigarettes. Today has been a good day.");
+        Room room6 = new Room ("hit by a magical light.","....You have resin from the dead.");
+        Room room7 = new Room ("at Strøget.","You are flying safely above Copenhagen, and landing at the nice landing strip Strøget. ");
+        Room room8 = new Room ("walking down the street.","People are yelling at you, but you dont care." );
+        Room room9 = new Room ("at Storke springvandet.","Your washing the blood of your clothes, unfortunately you hit a family on the way down. ");
 
 
         room1.setEast(room2);
@@ -29,9 +29,13 @@ public class Adventure{
         Room currenRoom = room1;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the Adventure game!");
-        System.out.println("THIS IS YOUR COMMANDS:\nExit - Lets your exit the game\nLook - Repeats room description \nNorth - Moves north\nSouth - Moves south\nEast - Moves east\nWest - Moves west" );
-        System.out.println("Pres ENTER to begin:");
+        System.out.println("WELCOME TO THE ADVENTURE GAME!\n");
+        System.out.println("THIS IS YOUR COMMANDS:");
+        System.out.println("--------------------------------");
+        System.out.println("Exit - Exit game\nHelp - Commands list\nLook - Repeats room description \nNorth / Go North / N - Player moves North\nSouth / Go South / S - Player moves South\nEast  / Go East  / E - Player moves East\nWest  / Go West  / W - Player moves West" );
+        System.out.println("--------------------------------");
+
+        System.out.println("\nYou are at a plane. You are about to jump out of the plane.\n");
 
 
         while (true) {
@@ -75,9 +79,6 @@ public class Adventure{
             if (currenRoom == room5) {
                 System.out.println("You Won!\nTry another path");
                 System.exit(1);
-            }
-            if (currenRoom == room1) {
-                System.out.println("You are at " + room1);
             }
             if (input.equalsIgnoreCase("exit")){
                 System.out.println("Winners never quit, and quitters never win");
