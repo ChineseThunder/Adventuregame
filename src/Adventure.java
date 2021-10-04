@@ -25,11 +25,15 @@ public class Adventure{
         room8.setEast(room9);
         room9.setNorth(room6);
         room4.setSouth(room7);
+
         Room currenRoom = room1;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the Adventure game\nPres ENTER to begin:");
-        
+        System.out.println("Welcome to the Adventure game!");
+        System.out.println("THIS IS YOUR COMMANDS:\nExit - Lets your exit the game\nLook - Repeats room description \nNorth - Moves north\nSouth - Moves south\nEast - Moves east\nWest - Moves west" );
+        System.out.println("Pres ENTER to begin:");
+
+
         while (true) {
             String input = sc.nextLine();
             if (input.equalsIgnoreCase("south") || (input.equalsIgnoreCase("s") || (input.equalsIgnoreCase("go south")))) {
@@ -38,7 +42,7 @@ public class Adventure{
                     System.out.println("Going South");
                     System.out.println("You are now " + currenRoom);
             } else {
-                System.out.println("Your changed your mind");
+                System.out.println("You changed your mind");
             }
             }
             if (input.equalsIgnoreCase("north") || (input.equalsIgnoreCase("n") || (input.equalsIgnoreCase("go north")))) {
@@ -47,7 +51,7 @@ public class Adventure{
                     System.out.println("Going North");
                     System.out.println("You are now " + currenRoom);
             } else {
-                System.out.println("Your changed your mind");
+                System.out.println("You changed your mind");
             }
             }
             if (input.equalsIgnoreCase("east") || (input.equalsIgnoreCase("e") || (input.equalsIgnoreCase("go east")))) {
@@ -56,7 +60,7 @@ public class Adventure{
                     System.out.println("Going East");
                     System.out.println("You are now " + currenRoom);
             } else {
-                System.out.println("Your changed your mind");
+                System.out.println("You changed your mind");
             }
             }
             if (input.equalsIgnoreCase("west") || (input.equalsIgnoreCase("w") || (input.equalsIgnoreCase("go west")))) {
@@ -65,7 +69,7 @@ public class Adventure{
                     System.out.println("Going West");
                     System.out.println("You are now " + currenRoom);
                 } else {
-                    System.out.println("Your changed your mind");
+                    System.out.println("You changed your mind");
             }
             }
             if (currenRoom == room5) {
@@ -80,7 +84,7 @@ public class Adventure{
                 System.exit(1);
             }
             if (input.equalsIgnoreCase("look")){
-                System.out.println("Your hit by deja-vu\n" + "You are at " + currenRoom);
+                System.out.println("You where hit by deja-vu\n" + "You are at " + currenRoom);
             }
             if (input.equalsIgnoreCase("help")){
                 System.out.println("THIS IS YOUR COMMANDS:\nExit - Lets your exit the game\nLook - Repeats room description \nNorth - Moves north\nSouth - Moves south\nEast - Moves east\nWest - Moves west" );
